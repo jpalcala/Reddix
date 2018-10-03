@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material-module';
 import { MenuComponent } from './layout/menu/menu.component';
+import { SortComponent } from './content/sort/sort.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    SortComponent
   ],
   imports: [
     BrowserModule,
