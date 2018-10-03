@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material';
+import {
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+} from '@angular/material';
 
 @NgModule({
     // By default angular 'imports' automatically, what why the imports array is not needed
     exports: [
-        MatButtonModule
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatListModule,
+        MatButtonModule,
     ]
 })
 export class MaterialModule { }
