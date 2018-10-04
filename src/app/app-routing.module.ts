@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SortComponent } from './content/sort/sort.component';
+import { PostListComponent } from './content/post-list/post-list.component';
+
 
 const routes: Routes = [
-  { path: '', component: SortComponent, pathMatch: 'full' },
-  { path: 'new', component: SortComponent },
-  { path: 'controversial', component: SortComponent },
-  { path: 'top', component: SortComponent },
-  { path: 'rising', component: SortComponent },
+  { path: '', component: PostListComponent, pathMatch: 'full' },
+  { path: 'new', component: PostListComponent },
+  { path: 'controversial', component: PostListComponent },
+  { path: 'top', component: PostListComponent },
+  { path: 'rising', component: PostListComponent },
 ];
 
 @NgModule({
