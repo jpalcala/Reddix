@@ -6,13 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material-module';
 import { MenuComponent } from './layout/menu/menu.component';
-import { SortComponent } from './content/sort/sort.component';
+import { PostListComponent } from './content/post-list/post-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    SortComponent
+    PostListComponent
   ],
   imports: [
     BrowserModule,
