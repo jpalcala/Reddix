@@ -6,14 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material-module';
 import { MenuComponent } from './layout/menu/menu.component';
-import { PostListComponent } from './content/post-list/post-list.component';
+import { PostsComponent } from './content/posts/posts.component';
+import { PostListComponent } from './content/posts/post-list/post-list.component';
+import { PostItemComponent } from './content/posts/post-list/post-item/post-item.component';
+import { UserComponent } from './content/user/user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    PostListComponent
+    PostsComponent,
+    UserComponent,
+    PostListComponent,
+    PostItemComponent
   ],
   imports: [
     BrowserModule,

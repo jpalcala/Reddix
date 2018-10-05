@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostListComponent } from './content/post-list/post-list.component';
+import { UserComponent } from './content/user/user.component';
+import { PostsComponent } from './content/posts/posts.component';
 
 
 const routes: Routes = [
-  { path: '', component: PostListComponent, pathMatch: 'full' },
-  { path: 'new', component: PostListComponent },
-  { path: 'controversial', component: PostListComponent },
-  { path: 'top', component: PostListComponent },
-  { path: 'rising', component: PostListComponent },
+  { path: '', component: PostsComponent, pathMatch: 'full' },
+  { path: 'users', component: UserComponent },
+  { path: ':subrredit', component: PostsComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

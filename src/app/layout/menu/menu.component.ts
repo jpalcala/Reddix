@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-menu',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
-    fillerNav = Array.from({ length: 10 }, (_, i) => `Nav Item ${i + 1}`);
+    constructor(private router: Router) { }
+
+    onChangeSubreddit(route: string): void {
+        const urlArray = (this.router.url).split('/');
+        this.router.navigate([route, urlArray[urlArray.length - 1]]);
+    }
 
 }

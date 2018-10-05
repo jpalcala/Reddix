@@ -8,6 +8,14 @@
   right: 0;
 }
 
+.row {
+  display: flex;
+}
+
+mat-tab-group {
+  width: 100%;
+}
+
 .example-is-mobile .example-toolbar {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
@@ -39,4 +47,13 @@ h1.example-app-name {
 
 .flex-navigation__item {
   flex-grow: 1;
+  cursor: pointer;
+}
+
+.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
 }
