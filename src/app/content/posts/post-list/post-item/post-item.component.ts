@@ -7,5 +7,8 @@ import { IPost } from '../ipost';
     styleUrls: ['./post-item.component.css']
 })
 export class PostItemComponent {
+
     @Input() post: IPost;
+    isOpen = false;
+
 }

@@ -1,4 +1,5 @@
 export interface IPost {
+    id: string;
     title: string;
     tag: string;
     subReddit: string;

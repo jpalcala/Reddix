@@ -10,6 +10,8 @@ import { PostsComponent } from './content/posts/posts.component';
 import { PostListComponent } from './content/posts/post-list/post-list.component';
 import { PostItemComponent } from './content/posts/post-list/post-item/post-item.component';
 import { UserComponent } from './content/user/user.component';
+import { PostDetailComponent } from './content/posts/post-detail/post-detail.component';
+import { PostActionsComponent } from './content/posts/post-actions/post-actions.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { UserComponent } from './content/user/user.component';
     PostsComponent,
     UserComponent,
     PostListComponent,
-    PostItemComponent
+    PostItemComponent,
+    PostActionsComponent,
+    PostDetailComponent,
   ],
   imports: [
     BrowserModule,

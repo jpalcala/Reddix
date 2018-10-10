@@ -5,6 +5,7 @@ export class PostsService {
 
     posts: IPost[] = [
         {
+            id: 'ajshd123',
             title: 'Post 1',
             tag: 'Reddit API',
             subReddit: 'r/redditdev',
@@ -13,6 +14,7 @@ export class PostsService {
             commentsNumber: 5
         },
         {
+            id: 'f11d12d',
             title: 'Post 2',
             tag: 'PRAW',
             subReddit: 'r/redditdev',
@@ -21,6 +23,7 @@ export class PostsService {
             commentsNumber: 4
         },
         {
+            id: '1bqjd1',
             title: 'Post 3',
             tag: 'MOMOS',
             subReddit: 'r/redditmomoz',
