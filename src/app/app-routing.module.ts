@@ -5,7 +5,8 @@ import { PostsComponent } from './content/posts/posts.component';
 
 
 const routes: Routes = [
-  { path: '', component: PostsComponent, pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: PostsComponent },
   { path: 'users', component: UserComponent },
   { path: ':subrredit', component: PostsComponent },
   { path: '**', redirectTo: '' }
