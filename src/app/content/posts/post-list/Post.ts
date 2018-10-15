@@ -1,4 +1,4 @@
-import { IPost } from './ipost';
+import { IPost } from '../ipost';
 
 export class Post implements IPost {
   constructor(

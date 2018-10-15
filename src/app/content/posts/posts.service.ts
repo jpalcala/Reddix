@@ -1,9 +1,9 @@
-import {Observable, Subject} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {Injectable} from '@angular/core';
-import {GenericService} from '../../core/generic.service';
-import {HttpService} from '../../core/http.service';
-import {Post} from './post-list/Post';
+import { Observable, Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { GenericService } from '../../core/generic.service';
+import { HttpService } from '../../core/http.service';
+import { Post } from './post-list/Post';
 
 @Injectable()
 export class PostsService extends GenericService {
@@ -17,13 +17,13 @@ export class PostsService extends GenericService {
   // 'MOMOS',     subReddit: 'r/redditmomoz',     postedBy: 'u/hij2', postedDate:
   // new Date(),     commentsNumber: 23182   } ]; Detect wheter is open or close
   // the post detail
-  isOpen = new Subject < boolean > ();
+  isOpen = new Subject<boolean>();
 
-  constructor(private http : HttpService) {
+  constructor(private http: HttpService) {
     super();
   }
 
-  getSubreddit(subreddit : string, limit : number, skip : number = 0) : Observable < Post[] > {
+  getSubreddit(subreddit: string, limit: number, skip: number = 0): Observable<Post[]> {
     return this
       .http
       .jsonp(`${this.environment.reddit}r/${subreddit}/.json?limit=${limit}&skip=${skip}`, 'jsonp')

@@ -19,7 +19,7 @@ export class PostListComponent implements OnInit {
 
     ngOnInit(): void {
         this.postsService.getSubreddit('all', 20).subscribe(post => {
-          this.posts = post;
+            this.posts = post;
         });
     }
 }
