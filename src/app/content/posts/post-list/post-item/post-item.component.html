@@ -1,29 +1,21 @@
 <mat-card>
   <mat-card-title>
-    {{ post.title }}
+    <a class="cursor" (click)="onPostDetail(post.id)">{{ post.title }}</a>
   </mat-card-title>
   <mat-card-subtitle>
     r/{{ post.subreddit }} | {{ post.author }} {{ post.postedDate | date:'short' }}
   </mat-card-subtitle>
-  <mat-card-actions>
-    <button mat-button>
-      <mat-icon>comment</mat-icon>
-      {{ post.commentsNumber }}
-    </button>
-    <button mat-button>
-      <mat-icon>share</mat-icon>
-    </button>
-    <button mat-button>
-      <mat-icon>save</mat-icon>
-    </button>
-    <button mat-button>
-      <mat-icon>stars</mat-icon>
-    </button>
-    <button mat-button>
-      <mat-icon>block</mat-icon>
-    </button>
-    <button mat-button>
-      <mat-icon>flag</mat-icon>
-    </button>
-  </mat-card-actions>
+  <app-post-actions [commentsNumber]="post.commentsNumber" [isExpanded]="isExpanded" (expand)="isExpanded = $event"></app-post-actions>
+  <mat-card-content *ngIf="isExpanded">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, neque odit tempora cumque dolore quam sunt
+    repellat rem quo aut ab unde soluta sit architecto aliquid Fdicta iure sint blanditiis?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eaque pariatur laboriosam illo nobis quam
+    sequi
+    perferendis, sint iusto molestiae repellendus, blanditiis fugit soluta. Repellendus blanditiis ab doloremque
+    asperiores provident.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, magnam aliquam sit architecto accusamus quos ad
+    officia fuga optio quisquam perferendis accusantium expedita consequuntur mollitia explicabo dignissimos
+    laudantium
+    cumque nesciunt.
+  </mat-card-content>
 </mat-card>

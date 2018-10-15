@@ -1,0 +1,8 @@
+mat-card-actions {
+  margin-bottom: 0px;
+}
+
+mat-card-actions>button {
+  min-width: 1rem;
+  padding: 0px .5rem;
+}
