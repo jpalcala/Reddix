@@ -12,6 +12,7 @@ import { PostItemComponent } from './content/posts/post-list/post-item/post-item
 import { UserComponent } from './content/user/user.component';
 import { PostDetailComponent } from './content/posts/post-detail/post-detail.component';
 import { PostActionsComponent } from './content/posts/post-actions/post-actions.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PostActionsComponent } from './content/posts/post-actions/post-actions.
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,11 @@
 import { IPost } from './ipost';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
+import { GenericService } from 'src/app/core/generic.service';
 
-export class PostsService {
 
+export class PostsService extends GenericService {
+
+    // Examples posts
     posts: IPost[] = [
         {
             id: 'ajshd123',
@@ -32,6 +35,11 @@ export class PostsService {
             commentsNumber: 23182
         },
     ];
+
+    // Detect wheter is open or close the post detail
+    isOpen = new Subject<boolean>();
+
+    constructor() { super(); }
 
     /**
      * Get the post list

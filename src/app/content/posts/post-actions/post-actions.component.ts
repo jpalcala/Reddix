@@ -12,7 +12,7 @@ import {
 })
 export class PostActionsComponent {
 
-    @Input() isOpen: boolean;
+    @Input() isExpanded: boolean;
     @Input() commentsNumber: number;
     @Output() expand = new EventEmitter<boolean>();
     iconMore = 'expand_more';
@@ -20,9 +20,9 @@ export class PostActionsComponent {
     icon = this.iconMore;
 
     onExpand(): void {
-        this.isOpen = !this.isOpen;
-        this.icon = this.isOpen ? this.iconLess : this.iconMore;
-        this.expand.emit(this.isOpen);
+        this.isExpanded = !this.isExpanded;
+        this.icon = this.isExpanded ? this.iconLess : this.iconMore;
+        this.expand.emit(this.isExpanded);
     }
 
     onViewComments(): void {

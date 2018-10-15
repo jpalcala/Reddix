@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatTabChangeEvent } from '@angular/material';
 
 @Component({
-    templateUrl: './posts.component.html'
+    templateUrl: './posts.component.html',
 })
 export class PostsComponent implements OnInit {
 
