@@ -1,8 +1,6 @@
 export interface IPost {
+    author: string;
+    subreddit: string;
     title: string;
-    tag: string;
-    subReddit: string;
-    postedBy: string;
-    postedDate: Date;
-    commentsNumber: number;
+    thumbnail: string;
 }

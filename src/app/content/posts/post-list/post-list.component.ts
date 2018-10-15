@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostsService } from './posts.service';
-import { IPost } from './ipost';
+import { Post } from './Post';
 
 @Component({
     selector: 'app-post-list',
@@ -13,13 +13,13 @@ export class PostListComponent implements OnInit {
     // Dummy posts
     // posts = Array.from({length: 50}, (_, i) => `Post ${i + 1}`);
 
-    posts: IPost[];
+    posts: Post[];
 
     constructor(private postsService: PostsService) { }
 
     ngOnInit(): void {
-        this.postsService.getPosts().subscribe(posts => {
-            this.posts = posts;
+        this.postsService.getSubreddit('all', 20).subscribe(post => {
+          this.posts = post;
         });
     }
 }

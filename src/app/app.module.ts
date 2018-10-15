@@ -10,7 +10,7 @@ import { PostsComponent } from './content/posts/posts.component';
 import { PostListComponent } from './content/posts/post-list/post-list.component';
 import { PostItemComponent } from './content/posts/post-list/post-item/post-item.component';
 import { UserComponent } from './content/user/user.component';
-
+import { HttpClientModule, HttpClientJsonpModule  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,9 @@ import { UserComponent } from './content/user/user.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    HttpClientJsonpModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
