@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from './Post';
+import { Post } from '../post';
 import { PostsService } from '../posts.service';
 
 @Component({
@@ -10,10 +10,9 @@ import { PostsService } from '../posts.service';
 })
 export class PostListComponent implements OnInit {
 
-    // Dummy posts
-    // posts = Array.from({length: 50}, (_, i) => `Post ${i + 1}`);
-
     posts: Post[];
+
+    isOpen = false;
 
     constructor(private postsService: PostsService) { }
 
@@ -21,5 +20,10 @@ export class PostListComponent implements OnInit {
         this.postsService.getSubreddit('all', 20).subscribe(post => {
             this.posts = post;
         });
+    }
+
+    onShowDetail(id: string): void {
+        console.log('onShowDetail', id);
+        this.isOpen = !this.isOpen;
     }
 }

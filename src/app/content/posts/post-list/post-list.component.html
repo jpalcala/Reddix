@@ -1,8 +1,8 @@
 <div fxLayout="row" fxLayout.xs="column">
     <div fxFlex="30">
-        <app-post-item *ngFor="let post of posts" [post]="post"></app-post-item>
+        <app-post-item (showDetail)="onShowDetail($event)" *ngFor="let post of posts" [post]="post"></app-post-item>
     </div>
-    <div fxFlex="70">
+    <div fxFlex="70" *ngIf="isOpen">
         <app-post-detail></app-post-detail>
     </div>
 </div>

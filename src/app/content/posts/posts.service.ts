@@ -3,7 +3,7 @@ import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { GenericService } from '../../core/generic.service';
 import { HttpService } from '../../core/http.service';
-import { Post } from './Post';
+import { Post } from './post';
 
 @Injectable()
 export class PostsService extends GenericService {

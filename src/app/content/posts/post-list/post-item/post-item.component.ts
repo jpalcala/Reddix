@@ -1,26 +1,23 @@
-import { Component, Input, ChangeDetectorRef, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, ChangeDetectorRef, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { IPost } from '../../ipost';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { PostsService } from '../../posts.service';
-import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-post-item',
     templateUrl: './post-item.component.html',
     styleUrls: ['./post-item.component.css']
 })
-export class PostItemComponent implements OnInit, OnDestroy {
+export class PostItemComponent implements OnDestroy {
 
     @Input() post: IPost;
+    @Output() showDetail = new EventEmitter<string>();
 
     private _mobileQuery: MediaQueryList;
     private _mobileQueryListener: () => void;
 
-    private _subsIsOpen: Subscription;
-
     isExpanded = false;
     isSmall = false;
-    isOpen = false;
 
     MAX_WIDTH = '600px';
 
@@ -37,22 +34,22 @@ export class PostItemComponent implements OnInit, OnDestroy {
         this._mobileQuery.addListener(this._mobileQueryListener);
     }
 
-    ngOnInit(): void {
-        this._subsIsOpen = this.postsService.isOpen.subscribe(isOpen => this.isOpen = isOpen);
-    }
-
+    /**
+     * Determine wheter is going to show the PostDetail
+     * next to the list or in a new route
+     * @param id Identifier of the post
+     */
     onPostDetail(id: string): void {
         if (!this.isSmall) {
-            this.postsService.isOpen.next(this.isOpen);
+            this.showDetail.emit(id);
         } else {
-            // Natigate to detail route
+            // Navigate to detail route
             console.log(id);
         }
     }
 
     ngOnDestroy(): void {
         this._mobileQuery.removeListener(this._mobileQueryListener);
-        this._subsIsOpen.unsubscribe();
     }
 
 }
