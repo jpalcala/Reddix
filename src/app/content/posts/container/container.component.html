@@ -1,0 +1,27 @@
+<mat-tab-group (selectedTabChange)="onChangeTab($event)">
+    <mat-tab label="HOT">
+        <ng-template matTabContent>
+            <app-post-list></app-post-list>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="New">
+        <ng-template matTabContent>
+            <app-post-list></app-post-list>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Controversial">
+        <ng-template matTabContent>
+            <app-post-list></app-post-list>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Top">
+        <ng-template matTabContent>
+            <app-post-list></app-post-list>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Rising">
+        <ng-template matTabContent>
+            <app-post-list></app-post-list>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>

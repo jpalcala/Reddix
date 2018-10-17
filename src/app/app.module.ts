@@ -14,13 +14,15 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { PostDetailComponent } from './content/posts/post-detail/post-detail.component';
 import { PostActionsComponent } from './content/posts/post-actions/post-actions.component';
 import { HttpService } from './core/http.service';
+import { ContainerComponent } from './content/posts/container/container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    PostsComponent,
     UserComponent,
+    PostsComponent,
+    ContainerComponent,
     PostListComponent,
     PostItemComponent,
     PostActionsComponent,
