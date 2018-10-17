@@ -14,6 +14,9 @@ export class PostListComponent implements OnInit {
 
     isOpen = false;
 
+    FLEX_ITEM = 100;
+    FLEX_DETAIL = 100;
+
     constructor(private postsService: PostsService) { }
 
     ngOnInit(): void {
@@ -24,6 +27,8 @@ export class PostListComponent implements OnInit {
 
     onShowDetail(id: string): void {
         console.log('onShowDetail', id);
-        this.isOpen = !this.isOpen;
+        // this.isOpen = !this.isOpen;
+        // this.FLEX_ITEM = this.isOpen ? 30 : 100;
+        // this.FLEX_DETAIL = this.isOpen ? 70 : 100;
     }
 }

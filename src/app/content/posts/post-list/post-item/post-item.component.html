@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>
-    <a class="cursor" (click)="onPostDetail(post.id)">{{ post.title }}</a>
+    <a class="cursor" [routerLink]="[post.id]">{{ post.title }}</a>
   </mat-card-title>
   <mat-card-subtitle>
     r/{{ post.subreddit }} | {{ post.author }} {{ post.postedDate | date:'short' }}

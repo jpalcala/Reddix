@@ -8,19 +8,7 @@ import { Post } from './post';
 @Injectable()
 export class PostsService extends GenericService {
 
-  // Examples posts posts : IPost[] = [   {     id: 'ajshd123',     title: 'Post
-  // 1',     tag: 'Reddit API',     subReddit: 'r/redditdev',     postedBy:
-  // 'u/abc1',     postedDate: new Date(),     commentsNumber: 5   }, {     id:
-  // 'f11d12d',     title: 'Post 2',     tag: 'PRAW',     subReddit:
-  // 'r/redditdev',     postedBy: 'u/edf2',     postedDate: new Date(),
-  // commentsNumber: 4   }, {     id: '1bqjd1',     title: 'Post 3',     tag:
-  // 'MOMOS',     subReddit: 'r/redditmomoz',     postedBy: 'u/hij2', postedDate:
-  // new Date(),     commentsNumber: 23182   } ]; Detect wheter is open or close
-  // the post detail
-
-  constructor(private http: HttpService) {
-    super();
-  }
+  constructor(private http: HttpService) { super(); }
 
   getSubreddit(subreddit: string, limit: number, skip: number = 0): Observable<Post[]> {
     return this
@@ -33,4 +21,5 @@ export class PostsService extends GenericService {
           .map(post => new Post(post['data'].id, post['data'].author, post['data'].subreddit, post['data'].title, post['data'].thumbnail));
       }));
   }
+
 }
