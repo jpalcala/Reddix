@@ -23,6 +23,7 @@ export class PostListComponent implements OnInit {
         this.postsService.getSubreddit('all', 20).subscribe(post => {
             this.posts = post;
         });
+        this.postsService.testErrorInterceptor();
     }
 
     onShowDetail(id: string): void {

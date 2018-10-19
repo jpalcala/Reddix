@@ -5,6 +5,8 @@ import {
     EventEmitter
 } from '@angular/core';
 import { MessageService } from 'src/app/core/message/message.service';
+import { IMessage } from 'src/app/core/message/imessage';
+import { MessageType } from 'src/app/core/message/message-type.enum';
 
 @Component({
     selector: 'app-post-actions',
@@ -30,7 +32,12 @@ export class PostActionsComponent {
 
     onViewComments(): void {
         console.log('onViewComments');
-        this.messageService.testNotification('test');
+        const message: IMessage = {
+            title: 'Test',
+            message: 'Testing message service',
+            type: MessageType.SUCCESS
+        };
+        this.messageService.testNotification(message);
     }
 
     onShare(): void {
