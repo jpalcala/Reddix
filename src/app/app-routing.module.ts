@@ -7,7 +7,7 @@ import { ContainerComponent } from './content/posts/container/container.componen
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/all', pathMatch: 'full' },
   // { path: 'home', component: PostsComponent },
   { path: 'users', component: UserComponent },
   {

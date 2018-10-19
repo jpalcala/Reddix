@@ -1,9 +1,9 @@
-<div fxLayout="row">
-    <div fxFlex="20" fxFlex.sm="10" fxHide.xs="true"></div>
+<div fxLayout="row" fxLayoutAlign="center">
+    <!-- <div fxFlex="20" fxFlex.sm="10" fxHide.xs="true"></div> -->
     <div fxFlex="60" fxFlex.sm="80" fxFlex.xs="100">
         <div fxLayout="column">
             <app-post-item *ngFor="let post of posts" [post]="post"></app-post-item>
         </div>
     </div>
-    <div fxFlex="20" fxFlex.sm="10" fxHide.xs="true"></div>
+    <!-- <div fxFlex="20" fxFlex.sm="10" fxHide.xs="true"></div> -->
 </div>

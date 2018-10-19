@@ -4,6 +4,7 @@ import {
     Output,
     EventEmitter
 } from '@angular/core';
+import { MessageService } from 'src/app/core/message/message.service';
 
 @Component({
     selector: 'app-post-actions',
@@ -19,6 +20,8 @@ export class PostActionsComponent {
     iconLess = 'expand_less';
     icon = this.iconMore;
 
+    constructor(private messageService: MessageService) { }
+
     onExpand(): void {
         this.isExpanded = !this.isExpanded;
         this.icon = this.isExpanded ? this.iconLess : this.iconMore;
@@ -27,6 +30,7 @@ export class PostActionsComponent {
 
     onViewComments(): void {
         console.log('onViewComments');
+        this.messageService.testNotification('test');
     }
 
     onShare(): void {
