@@ -18,8 +18,20 @@ export class PostsService extends GenericService {
         console.log(res);
         return res['data']
           .children
-          .map(post => new Post(post['data'].id, post['data'].author, post['data'].subreddit, post['data'].title, post['data'].thumbnail));
+          .map(post =>
+            new Post(
+              post['data'].id,
+              post['data'].author,
+              post['data'].subreddit,
+              post['data'].title,
+              post['data'].thumbnail,
+              post['data'].num_comments)
+          );
       }));
+  }
+
+  testErrorInterceptor(): void {
+    this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe();
   }
 
 }

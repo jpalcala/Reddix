@@ -6,6 +6,7 @@ export class Post implements IPost {
     public author: string,
     public subreddit: string,
     public title: string,
-    public thumbnail: string
+    public thumbnail: string,
+    public num_comments: number,
   ) { }
 }

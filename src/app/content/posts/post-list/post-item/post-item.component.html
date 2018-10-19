@@ -1,11 +1,23 @@
 <mat-card>
-  <mat-card-title>
-    <a class="cursor" [routerLink]="[post.id]">{{ post.title }}</a>
-  </mat-card-title>
-  <mat-card-subtitle>
-    r/{{ post.subreddit }} | {{ post.author }} {{ post.postedDate | date:'short' }}
-  </mat-card-subtitle>
-  <app-post-actions [commentsNumber]="post.commentsNumber" [isExpanded]="isExpanded" (expand)="isExpanded = $event"></app-post-actions>
+  <!-- <mat-card-title-group>
+    <mat-card-title>
+      <a class="cursor" [routerLink]="[post.id]">{{ post.title }}</a>
+    </mat-card-title>
+    <mat-card-subtitle>
+      r/{{ post.subreddit }} | {{ post.author }} {{ post.postedDate | date:'short' }}
+    </mat-card-subtitle>
+    <img mat-card-sm-image [src]="post.thumbnail">
+  </mat-card-title-group> -->
+  <mat-card-header>
+    <mat-card-title>
+      <a class="cursor" [routerLink]="[post.id]">{{ post.title }}</a>
+    </mat-card-title>
+    <mat-card-subtitle>
+      r/{{ post.subreddit }} | {{ post.author }} {{ post.postedDate | date:'short' }}
+    </mat-card-subtitle>
+    <img mat-card-avatar [src]="post.thumbnail">
+  </mat-card-header>
+  <app-post-actions [commentsNumber]="post.num_comments" [isExpanded]="isExpanded" (expand)="isExpanded = $event"></app-post-actions>
   <mat-card-content *ngIf="isExpanded">
     Lorem ipsum dolor sit amet consectetur adip icing elit. Asperiores, neque odit tempora cumque dolore quam sunt
     repellat rem quo aut ab unde soluta sit architecto aliquid Fdicta iure sint blanditiis?

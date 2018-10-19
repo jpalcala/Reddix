@@ -4,4 +4,5 @@ export interface IPost {
     subreddit: string;
     title: string;
     thumbnail: string;
+    num_comments: number;
 }
