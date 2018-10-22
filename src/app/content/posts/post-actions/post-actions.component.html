@@ -1,5 +1,5 @@
 <mat-card-actions>
-  <button mat-button (click)="onExpand()">
+  <button *ngIf="isExpandShown" mat-button (click)="onExpand()">
     <mat-icon>{{icon}}</mat-icon>
   </button>
   <button mat-button (click)="onViewComments()">

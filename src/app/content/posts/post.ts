@@ -8,5 +8,7 @@ export class Post implements IPost {
     public title: string,
     public thumbnail: string,
     public num_comments: number,
+    public selftext: string,
+    public created: Date
   ) { }
 }

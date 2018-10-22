@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { GenericService } from '../../core/generic.service';
 import { HttpService } from '../../core/http.service';
 import { Post } from './post';
+import { formatDate, DatePipe } from '@angular/common';
 
 @Injectable()
 export class PostsService extends GenericService {
@@ -25,7 +26,10 @@ export class PostsService extends GenericService {
               post['data'].subreddit,
               post['data'].title,
               post['data'].thumbnail,
-              post['data'].num_comments)
+              post['data'].num_comments,
+              post['data'].selftext,
+               new Date(post['data'].created_utc * 1000)
+              )
           );
       }));
   }

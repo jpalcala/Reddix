@@ -16,6 +16,7 @@ import { MessageType } from 'src/app/core/message/message-type.enum';
 export class PostActionsComponent {
 
     @Input() isExpanded: boolean;
+    @Input() isExpandShown: boolean;
     @Input() commentsNumber: number;
     @Output() expand = new EventEmitter<boolean>();
     iconMore = 'expand_more';

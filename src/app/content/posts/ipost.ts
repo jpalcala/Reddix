@@ -5,4 +5,6 @@ export interface IPost {
     title: string;
     thumbnail: string;
     num_comments: number;
+    selftext: string;
+    created: Date;
 }
